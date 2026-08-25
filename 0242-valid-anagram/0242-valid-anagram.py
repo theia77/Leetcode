@@ -5,11 +5,19 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        st=list(s)
-        tt=list(t)
-        st.sort()
-        tt.sort()
-        if st==tt:
-            return True
-        else:
-            return False
+        d={}
+        for x in list(s):
+            if x in d:
+                d[x]+=1
+            else:
+                d[x]=1
+        for x in list(t):
+            if x not in d:
+                return False
+            else:
+                d[x]-=1
+        for x in d:
+            if d[x]!=0:
+                return False
+
+        return True
