@@ -13,8 +13,7 @@ class Solution(object):
                 key=nums[i]//k
                 value=nums[i]
                 d[key]=value
-        num=list(d.keys())
-        output=[]
+        num=set(d.keys())
         i=1
         while True:
             if i not in num:
