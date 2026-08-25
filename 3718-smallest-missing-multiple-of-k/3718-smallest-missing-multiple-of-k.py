@@ -6,7 +6,6 @@ class Solution(object):
         :rtype: int
         """
         nums=list(set(nums))
-        nums.sort()
         d={}
         for i in range(len(nums)):
             if nums[i]%k==0:
